@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smuramat <smuramat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: smuramat <smuramat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 22:04:27 by smuramat          #+#    #+#             */
-/*   Updated: 2022/10/23 22:32:23 by smuramat         ###   ########.fr       */
+/*   Created: 2022/10/26 09:24:52 by smuramat          #+#    #+#             */
+/*   Updated: 2022/10/26 16:56:24 by smuramat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef WEAPON_HPP
+  #define WEAPON_HPP
 
 #include <string.h>
 #include <iostream>
@@ -24,11 +27,4 @@ public:
   const std::string &getType();
 };
 
-Weapon::Weapon(std::string type)
-{
-  this->setType(type);
-}
-
-Weapon::~Weapon()
-{
-}
+#endif
