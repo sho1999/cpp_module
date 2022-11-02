@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smuramat <smuramat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 16:50:16 by smuramat          #+#    #+#             */
-/*   Updated: 2022/10/30 14:43:20 by smuramat         ###   ########.fr       */
+/*   Created: 2022/10/31 20:41:25 by smuramat          #+#    #+#             */
+/*   Updated: 2022/10/31 21:47:41 by smuramat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
-
 #include <iostream>
-#include <string>
-#include <iomanip>
 
-class Contact
+class Fixed
 {
 private:
-	std::string	info[5];
-	std::string	info_tmp[5];
-	void	set_mini_contact(std::string info);
-	void	set_contact(std::string info);
+  int fixed_num;
+  static const int  bits = 8;
 public:
-	bool	make_contact();
-	void	show_mini_contact(int index);
-	void	show_contact(int index);
+  Fixed();
+  Fixed(const Fixed& a);
+  Fixed& operator=(const Fixed& a);
+  ~Fixed();
+  int getRawBits( void ) const;
+  void setRawBits( int const raw );
 };
-
-#endif
